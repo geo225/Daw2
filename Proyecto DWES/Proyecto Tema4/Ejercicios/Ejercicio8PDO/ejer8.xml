@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Departamentos>
+  <Departamento>
+    <Codigo>AAA</Codigo>
+    <Descripcion>Un lugar muy bonito</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>AAB</Codigo>
+    <Descripcion>Un lugar muy bonito 2</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>AAC</Codigo>
+    <Descripcion>wedwefuw</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>AAD</Codigo>
+    <Descripcion>frbggtmyu</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>AAE</Codigo>
+    <Descripcion>frbggtmyufs</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>AAF</Codigo>
+    <Descripcion>weferbgernh</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>AAG</Codigo>
+    <Descripcion>sdger</Descripcion>
+    <fecha/>
+  </Departamento>
+  <Departamento>
+    <Codigo>BBA</Codigo>
+    <Descripcion>wfwef</Descripcion>
+    <fecha/>
+  </Departamento>
+</Departamentos>

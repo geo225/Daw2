@@ -1,0 +1,32 @@
+<?php 
+$vistas=[ 
+    'inicio'=>'view/vinicio.php', 
+    'login'=>'view/vlogin.php',
+    'registro'=>'view/vregistro.php',
+    'WIP'=>'view/vWIP.php',
+    'codigo'=>'view/vcodigo.php',
+    'perfil'=>'view/vperfil.php',
+    'borrarperfil'=>'view/vborrarperfil.php',
+    'departamento'=>'view/vdepartamento.php',
+    'editardepartamento'=>'view/veditardepartamento.php',
+    'borrardepartamento'=>'view/vborrardepartamento.php',
+    'nuevodepartamento'=>'view/vnuevodepartamento.php',
+    'soap'=>'view/vsoap.php',
+    'rest'=>'view/vrest.php'
+]; 
+$controladores=[ 
+    'inicio'=>'controller/cinicio.php', 
+    'login'=>'controller/clogin.php',
+    'registro'=>'controller/cregistro.php',
+    'WIP'=>'controller/cWIP.php',
+    'codigo'=>'controller/ccodigo.php',
+    'perfil'=>'controller/cperfil.php',
+    'borrarperfil'=>'controller/cborrarperfil.php',
+    'departamento'=>'controller/cdepartamento.php',
+    'editardepartamento'=>'controller/ceditardepartamento.php',
+    'borrardepartamento'=>'controller/cborrardepartamento.php',
+    'nuevodepartamento'=>'controller/cnuevodepartamento.php',
+    'soap'=>'controller/csoap.php',
+    'rest'=>'controller/crest.php'
+    ]; 
+?>
