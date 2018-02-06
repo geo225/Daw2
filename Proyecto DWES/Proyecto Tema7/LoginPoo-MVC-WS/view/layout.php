@@ -128,7 +128,7 @@
 
     <!-- W3.CSS Container -->
     <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-        <p class="w3-right">Powered by <a href="/DAW204/public_html/index.php" title="Autor" target="_blank" class="w3-hover-opacity">Rodrigo Gutierrez</a></p>
+        <p class="w3-right">Powered by <a href="/DAW204/public_html/index.php" title="Autor" target="_blank" class="w3-hover-opacity">Rodrigo Gutierrez</a></p> 
         <p class="w3-half w3-right"><a href="http://daw-usgit.sauces.local/rodrigo225/DWES/tree/master/Proyecto%20DWES/Proyecto%20Tema7/LoginPoo-MVC-WS" class="w3-left w3-hover-opacity w3-margin-right">Repositorio</a><a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!="inicio" && $_GET['pagina']!="login"){ echo "index.php?pagina=WIP&ant=".$_GET['pagina']; }else { echo " index.php?pagina=WIP "; } ?>" class="w3-left w3-hover-opacity w3-margin-right">PHPDOC</a><a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!="inicio" && $_GET['pagina']!="login"){ echo "index.php?pagina=WIP&ant=".$_GET['pagina']; }else { echo " index.php?pagina=WIP "; } ?>" class="w3-left w3-hover-opacity w3-margin-right">Tecnologias</a></p>
     </div>
 
