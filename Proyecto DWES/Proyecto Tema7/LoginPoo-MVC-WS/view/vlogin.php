@@ -37,7 +37,7 @@
     </div>
 </div>
 <div class="container-fluid">
-  <h1 class="w3-xlarge w3-text-red"><b>Diagrama de Clases</b></h1>
+  <h1 class="w3-xlarge w3-text-red"><b>Diagramas</b></h1>
   <hr style="width:50px;border:5px solid red" class="w3-round">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -61,10 +61,10 @@
 
       <div class="item">
           <div class="carousel-caption">
-          <h3  class="w3-text-black">Diagramas</h3>
+          <h3  class="w3-text-black">Diagrama de Clases</h3>
         </div>
         <img src="webroot/media/img/diagramaMVCLogin.PNG" alt="Diagrama de Clases" style="width:100%;height:800px;">     
-      </div>
+      </div> 
     
       <div class="item">
           <div class="carousel-caption">
