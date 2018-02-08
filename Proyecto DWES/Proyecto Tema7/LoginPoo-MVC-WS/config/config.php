@@ -29,4 +29,5 @@ $controladores=[
     'soap'=>'controller/csoap.php',
     'rest'=>'controller/crest.php'
     ]; 
+
 ?>
