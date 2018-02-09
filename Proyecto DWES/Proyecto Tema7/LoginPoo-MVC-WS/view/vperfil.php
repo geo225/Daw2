@@ -17,9 +17,9 @@
                 echo " has-success";
             }
         }?>">
-            <label for="descUsuario" class="col-sm-4 col-md-4 col-lg-4  control-label">DescUsuario <span class="w3-text-red w3-margin-left"><?php echo $mensajeError['errorDescUsuario'];?></span></label>
+            <label for="descUsuario" class="col-sm-4 col-md-4 col-lg-4  control-label">DescUsuario<span class="w3-text-red w3-margin-left"><?php echo $mensajeError['errorDescUsuario'];?></span></label>
             <div class="col-sm-8 col-md-6 col-lg-4">
-                <input class="w3-input w3-border form-control " type="text" name="descUsuario" id="descUsuario" value="<?php if(isset($_POST['enviarEditar'])){ echo $_POST['descUsuario'];}else{ echo $_SESSION['usuario']->getDescUsuario(); }?> ">
+                <input class="w3-input w3-border form-control " type="text" name="descUsuario" id="descUsuario" value="<?php if(isset($_POST['enviarEditar'])){ echo $_POST['descUsuario'];}else{ echo $_SESSION['usuario']->getDescUsuario(); }?>">
             </div>
         </div>
         <div class="form-group 
