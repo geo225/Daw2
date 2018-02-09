@@ -10,13 +10,13 @@
     <div class="form-group">
             <label for="latitud" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label w3-left">Latitud</label>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
-                <input class="w3-input w3-border form-control" type="text" name="latitud" id="latitud" placeholder="-180 a 180" >
+                <input class="w3-input w3-border form-control" type="text" name="latitud" id="latitud" placeholder="-90 a 90" >
             </div>
         </div>
         <div class="form-group">
         <label for="longitud" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label w3-left">Longitud</label>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
-                <input class="w3-input w3-border form-control" type="text" name="longitud" id="longitud" placeholder="-180 a 180" >
+                <input class="w3-input w3-border form-control" type="text" name="longitud" id="longitud" placeholder="-90 a 90" >
             </div>
             
         </div> 
