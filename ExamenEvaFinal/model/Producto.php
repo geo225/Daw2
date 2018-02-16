@@ -10,7 +10,7 @@ include "ProductoPDO.php";
         private $Precio;
         private $Marca;
         private $Nombre;
-        
+
         public function __construct($codProducto,$descProducto,$Caracteristicas,$familia,$imagen,$Precio,$Marca,$Nombre){
             $this->codProducto = $codProducto;
             $this->descProducto = $descProducto;
@@ -75,7 +75,7 @@ include "ProductoPDO.php";
         }
         public static function ObtenerProducto($codProducto){
             $producto=null;
-            
+
             $arrayProducto=ProductoPDO::consultarProducto($codProducto);
             if (!empty($arrayProducto)){
                 $producto = new Producto($codProducto,$arrayProducto['descProducto'],$arrayProducto['Caracteristicas'],$arrayProducto['familia'],$arrayProducto['imagen'],$arrayProducto['Precio']);

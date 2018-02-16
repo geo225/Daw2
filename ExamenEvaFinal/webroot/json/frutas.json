@@ -1,0 +1,22 @@
+ {
+	"frutas":
+       [{
+ 	    "naranja": "Clauselina",
+		"tiempo": "Septiembre"
+	}, {
+	    "naranja": "Sasuma",
+		"tiempo": "Septiembre"
+	}, {
+		"naranja": "Clementina",
+		"tiempo": "Octubre"
+	}, {
+		"naranja": "Clemenvilla",
+		"tiempo": "Febrero"
+	}, {
+		"naranja": "Navelina",
+		"tiempo": "Noviembre"
+	}, {
+		"naranja": "Navelate",
+		"tiempo": "Febrero"
+	}]
+}

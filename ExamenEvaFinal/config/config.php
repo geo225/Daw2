@@ -1,0 +1,19 @@
+<?php
+$vistas=[
+    'inicio'=>'view/vinicio.php',
+    'login'=>'view/vlogin.php',
+    'registro'=>'view/vregistro.php',
+    'perfil'=>'view/vperfil.php',
+    'borrarperfil'=>'view/vborrarperfil.php',
+    'producto'=>'view/vproducto.php'
+];
+$controladores=[
+    'inicio'=>'controller/cinicio.php',
+    'login'=>'controller/clogin.php',
+    'registro'=>'controller/cregistro.php',
+    'perfil'=>'controller/cperfil.php',
+    'borrarperfil'=>'controller/cborrarperfil.php',
+    'producto'=>'controller/cproducto.php'
+    ];
+
+?>

@@ -21,7 +21,7 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block">
     <a href="Proyecto DWES/main.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="Images/003-servidor.png"/>DWES</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="Images/002-ordenador-personal.png"/> DWEC</a>
+    <a href="Proyecto DWEC/index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="Images/002-ordenador-personal.png"/> DWEC</a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="Images/001-diseno-de-sitio-web-simbolo.png"/> DIW</a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="Images/004-la-computacion-en-nube.png"/>DAW</a>
   </div>
@@ -47,9 +47,10 @@ body {font-size:16px;}
 			<h1 class="w3-xxxlarge w3-text-red"><b>Asignaturas</b></h1>
 			<hr style="width:50px;border:5px solid red" class="w3-round">
 			<a class="w3-hover-grey w3-xxlarge" href="Proyecto DWES/main.php">Desarrollo web entorno servidor</a><br/>
-			<a class="w3-hover-grey w3-xxlarge" href="#">Desarrollo web entorno cliente</a> <br/>
+			<a class="w3-hover-grey w3-xxlarge" href="Proyecto DWEC/index.php">Desarrollo web entorno cliente</a> <br/>
 			<a class="w3-hover-grey w3-xxlarge" href="#">Diseño de interfaces web</a><br/>
 			<a class="w3-hover-grey w3-xxlarge" href="#">Despliege de aplicaciones web</a><br/>
+            <a class="w3-hover-grey w3-xxlarge" href="ExamenEvaFinal/index.php">Examen Final Baldo</a><br/>
 		</div>
 </div>
 

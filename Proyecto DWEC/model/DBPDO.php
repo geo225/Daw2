@@ -18,7 +18,7 @@ include_once('config/constDB.php');
      */ 
         public static function ejecutarConsulta($sql, $parametros){
             try{
-            $conn = new PDO(DATOSCONEXION, mysql_User, mysql_Password);					
+            $conn = new PDO(DATOSCONEXION, mysql_User, mysql_Password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));					
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
             $resultado = $conn->prepare($sql); 
             $resultado->execute($parametros); 
