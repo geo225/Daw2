@@ -12,7 +12,8 @@ $vistas=[
     'borrardepartamento'=>'view/vborrardepartamento.php',
     'nuevodepartamento'=>'view/vnuevodepartamento.php',
     'soap'=>'view/vsoap.php',
-    'rest'=>'view/vrest.php'
+    'rest'=>'view/vrest.php',
+    'tecnologias'=>'view/vtecnologias.php'
 ]; 
 $controladores=[ 
     'inicio'=>'controller/cinicio.php', 
@@ -27,7 +28,8 @@ $controladores=[
     'borrardepartamento'=>'controller/cborrardepartamento.php',
     'nuevodepartamento'=>'controller/cnuevodepartamento.php',
     'soap'=>'controller/csoap.php',
-    'rest'=>'controller/crest.php'
+    'rest'=>'controller/crest.php',
+    'tecnologias'=>'controller/ctecnologias.php'
     ]; 
 
 ?>
