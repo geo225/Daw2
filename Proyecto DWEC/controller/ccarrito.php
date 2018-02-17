@@ -11,8 +11,8 @@
         }
         
     }
-    if (isset($_POST['borrarProducto'])){
-        $_SESSION['carrito']->borrarProducto($_POST['borrarProducto']);
+    if (isset($_GET['borrarProducto'])){
+        $_SESSION['carrito']->borrarProducto($_GET['borrarProducto']);
     }
     $_GET["pagina"]="carrito";
     include_once 'view/layout.php';
