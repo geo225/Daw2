@@ -45,6 +45,5 @@
             <button name="enviarEditar" type="submit" class="btn btn-outline-success my-2 my-sm-0" value="login">Cambiar</button>
         </div>
     </form>
-    <?php echo '<span style="color:red;">'. $errorEditar .'</span>'; ?>
     </div>
 </div>

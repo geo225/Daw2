@@ -9,6 +9,7 @@
  */ 
     require_once ('model/Producto.php'); //incluimos el Modelo
     require_once ('model/Usuario.php');
+    require_once ('model/Carrito.php');
     require_once ('config/config.php'); //incluimos el Fichero de configuración
  require 'core/FuncionesValidacion.php'; // Incluidos las funciones de Validacion
     session_start(); // Iniciamos una session o reanudamos la session

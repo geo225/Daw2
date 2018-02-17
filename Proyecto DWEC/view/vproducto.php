@@ -77,7 +77,15 @@
             </table>
             <p style="color:#44d62c"><span style="color:white">Precio: </span>
                 <?php echo $producto->getPrecio(); ?>€</p>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin:auto;">Comprar</button>
+            <?php if(isset($_SESSION['usuario'])){
+        ?><a href="index.php?pagina=carrito&codProducto=<?php echo $producto->getCodProducto(); ?>" class="btn btn-outline-success my-2 my-sm-0" role="button" style="margin:auto;">Comprar</a>
+        <?php    
+            }else{
+    ?>
+         <p style="color:#44d62c">Se necesita iniciar sesion para comprar </p>
+<?php
+}
+?>            
         </div>
     </div>
 <script>

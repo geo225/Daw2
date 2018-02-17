@@ -1,18 +1,10 @@
 <?php
     class Carrito{
         private $codCarrito;
-        private $Productos[];
-        private $Cantidad;
-        
-        public function __construct($codProducto,$descProducto,$Caracteristicas,$familia,$imagen,$Precio,$Marca,$Nombre){
-            $this->codProducto = $codProducto;
-            $this->descProducto = $descProducto;
-            $this->Caracteristicas = $Caracteristicas;
-            $this->familia = $familia;
-            $this->imagen = $imagen;
-            $this->Precio = $Precio;
-            $this->Marca = $Marca;
-            $this->Nombre = $Nombre;
+        private $Productos;       
+        public function __construct($codCarrito,$Productos){
+            $this->codCarrito = $codCarrito;
+            $this->Productos = $Productos;
         }
         public function getCodCarrito(){
 		return $this->codCarrito;
@@ -22,20 +14,17 @@
 		$this->codCarrito = $codCarrito;
 	}
 
-	public function getProductos[](){
-		return $this->Productos[]; 
+	public function getProductos(){
+		return $this->Productos; 
 	}
 
-	public function setProductos[]($Productos[]){
-		$this->Productos[] = $Productos[];
+	public function setProductos($Productos){
+		$this->Productos = $Productos;
 	}
-
-	public function getCantidad(){
-		return $this->Cantidad;
-	}
-
-	public function setCantidad($Cantidad){
-		$this->Cantidad = $Cantidad;
-	}
-        
+    function agregarProducto($codProducto){
+        array_push($this->Productos,['codProducto'=>$codProducto]);
     }
+        function borrarProducto($posicion){
+            array_splice($this->Productos,$posicion,1);
+        }
+}

@@ -1,4 +1,9 @@
 <?php
+ $mensajeError = array(
+		"errorUsuario"=>null,					
+		"errorPassword"=>null,
+	);
+
     if(!isset($_GET['Producto'])){
          header("Location: index.php");
     }else{

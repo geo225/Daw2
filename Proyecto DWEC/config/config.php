@@ -5,7 +5,8 @@ $vistas=[
     'registro'=>'view/vregistro.php',
     'perfil'=>'view/vperfil.php',
     'borrarperfil'=>'view/vborrarperfil.php',
-    'producto'=>'view/vproducto.php'
+    'producto'=>'view/vproducto.php',
+    'carrito'=>'view/vcarrito.php'
 ]; 
 $controladores=[ 
     'inicio'=>'controller/cinicio.php', 
@@ -13,7 +14,8 @@ $controladores=[
     'registro'=>'controller/cregistro.php',
     'perfil'=>'controller/cperfil.php',
     'borrarperfil'=>'controller/cborrarperfil.php',
-    'producto'=>'controller/cproducto.php'
+    'producto'=>'controller/cproducto.php',
+    'carrito'=>'controller/ccarrito.php'
     ]; 
 
 ?>

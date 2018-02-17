@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -89,6 +90,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php" style="color:#44d62c;">Inicio <span class="sr-only">(current)</span></a>
                 </li>
+                <?php if(isset($_SESSION['carrito'])){ ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=carrito" style="color:#44d62c;">Carrito</a>
+                </li>
+                <?php } ?>
             </ul>
             <?php if (!isset($_SESSION['usuario'])){ ?>
             <ul class="navbar-nav" style="margin-right: 20px">
@@ -96,7 +102,7 @@
                     <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#44d62c;width:150px;text-aling-right">Iniciar Sesion</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01" style="background-color:#0d0d0d;">
                         <form id="formulario1" class="form-horizontal" name="FormularioLogin" action="<?PHP echo $_SERVER['PHP_SELF']; ?>" style="width:90%; margin:auto;" method="post">
-                            <div class="form-group <?php if(isset($_POST['enviarLogin'])){  
+                            <div class="form-group <?php if(isset($_POST['enviarLogin'])){
             if(!empty($mensajeError['errorUsuario'])){
                 echo " has-error ";
             }else{
