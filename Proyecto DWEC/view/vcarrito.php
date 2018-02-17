@@ -9,14 +9,14 @@
             $imagenes=explode(",",$imagenes);
             ?>
             <div class="row col-12">
-                <div class="col-3 d-flex align-items-center">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-3 d-flex align-items-center">
                     <img src="<?php echo $imagenes[0]; ?>" alt="Diagrama de Ficharos" style="width:150px; height:100px; margin-right: 20px;">
                 </div>
-                <div class="col-6 d-flex align-items-center r-verde">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-6 d-flex align-items-center r-verde">
                     <span style="color:white;margin-right:3px;">Marca: </span>
                     <?php echo $productos->getMarca(); ?><span style="color:white;;margin-right:3px; margin-left: 20px;">Nombre: </span><strong><?php echo $productos->getNombre(); ?> </strong> <span style="color:white;;margin-right:3px; margin-left: 20px;">Precio: </span><span class="atm"><?php echo $productos->getPrecio(); ?></span>€
                 </div>
-                <div class="col-3 d-flex align-items-center r-verde">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex align-items-center r-verde">
                     <label for="cantidad<?php echo $i; ?>" style="color:#44d62c;margin-right: 10px;">Cantidad: </label>
                     <input class="form-control amt" type="number" name="cantidad<?php echo $i; ?>" id="cantidad<?php echo $i; ?>" value="1" min="1">
                     <form action="<?PHP echo " index.php?pagina=carrito " ?>" method="post" style="margin-left:4px;">

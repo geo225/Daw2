@@ -27,4 +27,13 @@
         function borrarProducto($posicion){
             array_splice($this->Productos,$posicion,1);
         }
+    function comprobarProducto($codProducto){
+       $existe=false;
+        for ($i=0;$i<count($this->Productos);$i++){
+            if ($this->Productos[$i]['codProducto']==$codProducto){
+                $existe=true;
+            }
+        }
+        return $existe;
+    }
 }
