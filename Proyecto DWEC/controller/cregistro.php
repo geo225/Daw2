@@ -49,6 +49,8 @@
         $objUser = Usuario::registrarUsuario($usuario,$password);
         if (isset($objUser)){
             echo "Usuario Creado con exito";
+            $_SESSION['usuario']=$objUser;
+            Usuario::UltimaConexionyAcceso($objUser->getCodUsuario()); 
             header("Location: index.php"); //Redirige al index depues de realizar correctamente el Registro
         }else{
             $errorRegistro="No se ha podido crear al Usuario"; //Carga el error en el login
