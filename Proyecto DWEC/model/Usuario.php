@@ -24,10 +24,6 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
      */ 
         private $codUsuario;
          /** 
-     * @var string  $descUsuario    Descripcion del usuario 
-     */ 
-        private $descUsuario;
-        /** 
      * @var string  $password       Contraseña del usuario. 
      */ 
         private $password;
@@ -43,6 +39,9 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
      * @var int     $contadorAccesos      Contador de los accesos del usuario 
      */ 
         private $contadorAccesos;
+        private $Apellidos;
+        private $Direccion;
+        private $Email;
          /** 
          * Constructor de la clase Usuario. 
          * 
@@ -53,13 +52,15 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
          * @param   string  $password       contraseña del usuario. 
          * @param   string  $perfil         tipo de perfil del usuario. 
          */ 
-    public function __construct($codUsuario,$descUsuario,$password,$perfil,$ultimaConexion,$contadorAccesos){
+    public function __construct($codUsuario,$password,$perfil,$ultimaConexion,$contadorAccesos,$Apellidos,$Direccion,$Email){
         $this->codUsuario = $codUsuario;
-        $this->descUsuario = $descUsuario;
         $this->password = $password;
         $this->perfil = $perfil;
         $this->ultimaConexion = $ultimaConexion;
         $this->contadorAccesos = $contadorAccesos;
+        $this->Apellidos = $Apellidos;
+        $this->Direccion = $Direccion;
+        $this->Email = $Email;
     }
         /**  
          * Función que devuelve el codUsuario. 
@@ -73,14 +74,6 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
          * Función que devuelve la descUsuario. 
          * 
          * @return string $descUsuario  descripcion del usuario.  
-         */ 
-    public function getDescUsuario(){
-        return $this->descUsuario;
-    }
-        /**  
-         * Función que devuelve la contraseña 
-         * 
-         * @return string $password contraseña del usuario.  
          */ 
     public function getPassword(){
         return $this->password;
@@ -118,14 +111,6 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
         $this->codUsuario = $codUsuario;
     }
         /**  
-         * Función que inserta una nueva descUsuario. 
-         * 
-         * @param string $descUsuario  descripcion del usuario.  
-         */ 
-    public function setDescUsuario($descUsuario){
-        $this->descUsuario = $descUsuario;
-    }
-        /**  
          * Función que inserta una nueva contraseña 
          * 
          * @param string $password contraseña del usuario.  
@@ -157,6 +142,30 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
     public function setContadorAccesos($contadorAccesos){
         $this->contadorAccesos = $contadorAccesos;
     }
+        
+	public function getApellidos(){
+		return $this->Apellidos;
+	}
+
+	public function setApellidos($Apellidos){
+		$this->Apellidos = $Apellidos;
+	}
+
+	public function getDireccion(){
+		return $this->Direccion;
+	}
+
+	public function setDireccion($Direccion){
+		$this->Direccion = $Direccion;
+	}
+
+	public function getEmail(){
+		return $this->Email;
+	}
+
+	public function setEmail($Email){
+		$this->Email = $Email;
+	}
         /** 
          * Función para validar el usuario 
          * 
@@ -172,14 +181,14 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
         $usuario=null; 
             $arrayUsuario=UsuarioPDO::validarUsuario($codUsuario,$password); 
             if(!empty($arrayUsuario)) { 
-                $usuario = new Usuario($codUsuario, $arrayUsuario['descUsuario'], $password, $arrayUsuario['perfil'], $arrayUsuario['ultimaConexion'], $arrayUsuario['contadorAccesos']);
+                $usuario = new Usuario($codUsuario, $password, $arrayUsuario['perfil'], $arrayUsuario['ultimaConexion'], $arrayUsuario['contadorAccesos'], $arrayUsuario['Apellidos'], $arrayUsuario['Direccion'], $arrayUsuario['Email']);
             } 
             return $usuario; 
         }
-        public static function registrarUsuario($codUsuario, $password){
+        public static function registrarUsuario($codUsuario, $password,$Apellidos,$Direccion,$Email){
             $usuario=null;
-            if(UsuarioPDO::registrarUsuario($codUsuario,$password)){
-                $usuario = new Usuario($codUsuario,$codUsuario,$password,"usuario",date("y-m-d"),0);
+            if(UsuarioPDO::registrarUsuario($codUsuario,$password,$Apellidos,$Direccion,$Email)){
+                $usuario = new Usuario($codUsuario,$password,"usuario",date("y-m-d"),0,$Apellidos,$Direccion,$Email);
             }
             return $usuario;
         }
@@ -187,15 +196,23 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
             UsuarioPDO::UltimaConexion($codUsuario);
             UsuarioPDO::AumentarAccesos($codUsuario);
         }
-        public function editarUsuario($descUsuario, $password){
+        public function editarUsuario($password,$Apellidos,$Direccion,$Email){
             $correcto=false;
             $codUsuario=$this->getCodUsuario();
             if(empty($password)){
                 $password=$this->getPassword();
+            }if(empty($Apellidos)){
+                $Apellidos=$this->getApellidos();
+            }if(empty($Direccion)){
+                $Direccion=$this->getDireccion();
+            }if(empty($Email)){
+                $Email=$this->getEmail();
             }
-            if(UsuarioPDO::editarUsuario($codUsuario,$descUsuario,$password)){
-                $this->setDescUsuario($descUsuario);
+            if(UsuarioPDO::editarUsuario($codUsuario,$password,$Apellidos,$Direccion,$Email)){
                 $this->setPassword($password);
+                $this->setApellidos($Apellidos);
+                $this->setDireccion($Direccion);
+                $this->setEmail($Email);
                 $correcto=true;
             }
             return $correcto;

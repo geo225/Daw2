@@ -11,7 +11,10 @@
 
     $usuario="";
 	$password="";
-    $password2=""; 
+    $password2="";
+    $apellidos="";
+    $direccion="";
+    $email="";
     $errorRegistro="";
     
 	$noError=true;
@@ -20,6 +23,9 @@
 		"errorUsuario"=>null,
         "errorUsuarioDuplicado"=>null,
 		"errorPassword"=>null,
+        "errorApellidos"=>null,
+        "errorDireccion"=>null,
+        "errorEmail"=>null,
         "errorDuplicado"=>null
 	);
 	//Si se ha enviado el Formulario Comprueba los errores	
@@ -27,6 +33,9 @@
 		//Comprobación de Errores
 		$mensajeError["errorUsuario"]=comprobarTexto($_POST['usuario'],10);
 		$mensajeError["errorPassword"]=comprobarAlfaNumerico($_POST['password'],10);
+        $mensajeError["errorApellidos"]=comprobarAlfaNumerico($_POST['Apellidos'],255);
+        $mensajeError["errorDireccion"]=comprobarAlfaNumerico($_POST['Direccion'],255);
+        $mensajeError["errorEmail"]=validarEmail($_POST['Email'],255);
 		//Comprobación de que los errores estan vacios para saber que no ha ocurrido ningun error
         if ($_POST['password']!=$_POST['password2']){
             $mensajeError["errorDuplicado"]="Las Contraseñas no coinciden";
@@ -46,7 +55,10 @@
 		//Tratamiento de los datos antes de la inserción
 		$usuario=htmlspecialchars(strip_tags(trim($_POST['usuario'])));
 		$password=hash('sha256',$_POST['password']);
-        $objUser = Usuario::registrarUsuario($usuario,$password);
+        $apellidos=$_POST['Apellidos'];
+        $direccion=$_POST['Direccion'];
+        $email=$_POST['Email'];
+        $objUser = Usuario::registrarUsuario($usuario,$password,$apellidos,$direccion,$email);
         if (isset($objUser)){
             echo "Usuario Creado con exito";
             $_SESSION['usuario']=$objUser;

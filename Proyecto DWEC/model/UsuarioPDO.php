@@ -23,18 +23,20 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
             $arrayUsuario=[]; 
             $resultadoConsulta=DBPDO::ejecutarConsulta($sql,[$codUsuario,$password]); 
             if ($resultadoConsulta->rowCount()==1) { 
-                $resultadoFetch = $resultadoConsulta->fetchObject(); 
-                $arrayUsuario['descUsuario'] = $resultadoFetch->descUsuario; 
+                $resultadoFetch = $resultadoConsulta->fetchObject();  
                 $arrayUsuario['perfil'] = $resultadoFetch->perfil; 
                 $arrayUsuario['ultimaConexion'] = $resultadoFetch->ultimaConexion; 
-                $arrayUsuario['contadorAccesos'] = $resultadoFetch->contadorAccesos; 
+                $arrayUsuario['contadorAccesos'] = $resultadoFetch->contadorAccesos;
+                $arrayUsuario['Apellidos'] = $resultadoFetch->Apellidos;
+                $arrayUsuario['Direccion'] = $resultadoFetch->Direccion;
+                $arrayUsuario['Email'] = $resultadoFetch->Email;
             } 
             return $arrayUsuario; 
         }
-        public static function registrarUsuario($codUsuario,$password){
+        public static function registrarUsuario($codUsuario,$password,$Apellidos,$Direccion,$Email){
             $altaCorrecta=true;
-            $sql = "Insert into Usuarios values (?,?,?,'usuario',CURDATE(),0) ";
-            $resultado= DBPDO::ejecutarConsulta($sql,[$codUsuario,$codUsuario,$password]);
+            $sql = "Insert into Usuarios values (?,?,'usuario',CURDATE(),0,?,?,?) ";
+            $resultado= DBPDO::ejecutarConsulta($sql,[$codUsuario,$password,$Apellidos,$Direccion,$Email]);
             if ($resultado->rowCount()!=1){
                 $altaCorrecta = false;
             }
@@ -48,10 +50,10 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
             $sql="Update Usuarios set contadorAccesos=contadorAccesos+1 where codUsuario=?";
             DBPDO::ejecutarConsulta($sql,[$codUsuario]);
         }
-        public static function editarUsuario($codUsuario,$descUsuario,$password){
+        public static function editarUsuario($codUsuario,$password,$Apellidos,$Direccion,$Email){
             $correcto=true;
-            $sql="Update Usuarios set descUsuario=?, password=? where codUsuario=?";
-            $resultado= DBPDO::ejecutarConsulta($sql,[$descUsuario,$password,$codUsuario]);
+            $sql="Update Usuarios set password=?, Apellidos=?, Direccion=?, Email=? where codUsuario=?";
+            $resultado= DBPDO::ejecutarConsulta($sql,[$password,$Apellidos,$Direccion,$Email,$codUsuario]);
             if($resultado->rowCount()!=1){
                 $correcto = false;
             }

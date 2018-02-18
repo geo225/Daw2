@@ -9,18 +9,6 @@
                 <input class="w3-input w3-border form-control" type="text" name="usuario" id="usuario" value="<?php echo $_SESSION['usuario']->getCodUsuario(); ?> " disabled>
             </div>
         </div>
-        <div class="form-group<?php if(isset($_POST['enviarEditar'])){  
-            if(!empty($mensajeError['errorDescUsuario'])){
-                echo " has-error";
-            }else{
-                echo " has-success";
-            }
-        }?>">
-            <label for="descUsuario" class="col-sm-12 col-md-12 col-lg-12  control-label" style="color:#44d62c;">DescUsuario<span style="color:red;"><?php echo $mensajeError['errorDescUsuario'];?></span></label>
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <input class="form-control " type="text" name="descUsuario" id="descUsuario" value="<?php if(isset($_POST['enviarEditar'])){ echo $_POST['descUsuario'];}else{ echo $_SESSION['usuario']->getDescUsuario(); }?>">
-            </div>
-        </div>
         <div class="form-group 
         <?php if(isset($_POST['enviarEditar'])){  
             if(!empty($mensajeError['errorPassword'])){
@@ -38,6 +26,42 @@
             <label for="perfil" class="col-sm-4 col-md-4 col-lg-4 control-label" style="color:#44d62c;">Perfil</label>
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <input class="form-control" type="text" name="perfil" id="perfil" value="<?php echo $_SESSION['usuario']->getPerfil(); ?> " disabled>
+            </div>
+        </div>
+        <div class="form-group<?php if(isset($_POST['enviarEditar'])){  
+            if(!empty($mensajeError['errorApellidos'])){
+                echo " has-error";
+            }else{
+                echo " has-success";
+            }
+        }?>">
+            <label for="Apellidos" class="col-sm-12 col-md-12 col-lg-12  control-label" style="color:#44d62c;">Apellidos<span style="color:red;"><?php echo $mensajeError['errorApellidos'];?></span></label>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <input class="form-control " type="text" name="Apellidos" id="Apellidos" value="<?php if(isset($_POST['enviarEditar'])){ echo $_POST['Apellidos'];}else{ echo $_SESSION['usuario']->getApellidos(); }?>">
+            </div>
+        </div>
+        <div class="form-group<?php if(isset($_POST['enviarEditar'])){  
+            if(!empty($mensajeError['errorDireccion'])){
+                echo " has-error";
+            }else{
+                echo " has-success";
+            }
+        }?>">
+            <label for="Direccion" class="col-sm-12 col-md-12 col-lg-12  control-label" style="color:#44d62c;">Direccion<span style="color:red;"><?php echo $mensajeError['errorApellidos'];?></span></label>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <input class="form-control " type="text" name="Direccion" id="Direccion" value="<?php if(isset($_POST['enviarEditar'])){ echo $_POST['Direccion'];}else{ echo $_SESSION['usuario']->getDireccion(); }?>">
+            </div>
+        </div>
+        <div class="form-group<?php if(isset($_POST['enviarEditar'])){  
+            if(!empty($mensajeError['errorEmail'])){
+                echo " has-error";
+            }else{
+                echo " has-success";
+            }
+        }?>">
+            <label for="Email" class="col-sm-12 col-md-12 col-lg-12  control-label" style="color:#44d62c;">Email<span style="color:red;"><?php echo $mensajeError['errorEmail'];?></span></label>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <input class="form-control " type="email" name="Email" id="Email" value="<?php if(isset($_POST['enviarEditar'])){ echo $_POST['Email'];}else{ echo $_SESSION['usuario']->getEmail(); }?>">
             </div>
         </div>
         <div class="form-group ">

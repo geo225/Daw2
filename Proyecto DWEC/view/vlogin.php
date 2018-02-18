@@ -1,4 +1,5 @@
 <?php
+if(isset($productos)){
     for ($i=0;$i<count($productos);$i++){
         $imagenes=$productos[$i]->getImagen();
         $imagenes=explode(",",$imagenes);
@@ -13,4 +14,12 @@
         </div>
 </div>
         <?php }
+}else{
+    ?>
+    <div class="row">
+       <h1 class="col-12" style="color: white;">Lo Sentimos </h1>
+        <p class="r-verde col-12">No se han encontrado Productos</p>
+    </div>
+    <?php
+}
 ?>
