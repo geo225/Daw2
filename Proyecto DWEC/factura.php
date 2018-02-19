@@ -22,8 +22,8 @@ for ($i=0;$i<count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->g
     echo "<tr>";
     echo "<td>$Marca[$i]</td>";
     echo "<td>$Nombre[$i]</td>";
+    echo "<td>".$_GET['cantidad'.$i]."</td>";
     echo "<td>$Precio[$i]€</td>";
-    echo "<td>".$_GET['cantidad'.$i]."</td>"; 
     echo "</tr>";
 };
     echo "<tr>";
