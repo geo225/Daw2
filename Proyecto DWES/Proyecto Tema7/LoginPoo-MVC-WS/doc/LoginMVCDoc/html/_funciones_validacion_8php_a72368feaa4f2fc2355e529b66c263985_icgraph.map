@@ -1,0 +1,6 @@
+<map id="comprobarMinTamanio" name="comprobarMinTamanio">
+<area shape="rect" id="node2" href="$_funciones_validacion_8php.html#a7042964bb8b03c2041c8a552d4ccac7f" title="comprobarTexto" alt="" coords="229,5,344,32"/>
+<area shape="rect" id="node3" href="$_funciones_validacion_8php.html#a96f58ee5c851d0acbf40140374f2d55d" title="comprobarCodigo" alt="" coords="225,56,348,83"/>
+<area shape="rect" id="node4" href="$_funciones_validacion_8php.html#abb68e484b4a8d5ad7f1b0fa4f109cbd4" title="comprobarAlfaNumerico" alt="" coords="207,107,367,133"/>
+<area shape="rect" id="node5" href="$_funciones_validacion_8php.html#a1dddb5a20a0f5b2fdca5a8cf535f3fed" title="validarEmail" alt="" coords="241,157,332,184"/>
+</map>

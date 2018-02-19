@@ -1,0 +1,6 @@
+<map id="comprobarMaxTamanio" name="comprobarMaxTamanio">
+<area shape="rect" id="node2" href="$_funciones_validacion_8php.html#a7042964bb8b03c2041c8a552d4ccac7f" title="comprobarTexto" alt="" coords="233,5,348,32"/>
+<area shape="rect" id="node3" href="$_funciones_validacion_8php.html#a96f58ee5c851d0acbf40140374f2d55d" title="comprobarCodigo" alt="" coords="229,56,352,83"/>
+<area shape="rect" id="node4" href="$_funciones_validacion_8php.html#abb68e484b4a8d5ad7f1b0fa4f109cbd4" title="comprobarAlfaNumerico" alt="" coords="211,107,371,133"/>
+<area shape="rect" id="node5" href="$_funciones_validacion_8php.html#a1dddb5a20a0f5b2fdca5a8cf535f3fed" title="validarEmail" alt="" coords="245,157,336,184"/>
+</map>

@@ -27,7 +27,7 @@ $controladores=[
     'editardepartamento'=>'controller/ceditardepartamento.php',
     'borrardepartamento'=>'controller/cborrardepartamento.php',
     'nuevodepartamento'=>'controller/cnuevodepartamento.php',
-    'soap'=>'controller/csoap.php',
+    'soap'=>'controller/csoap.php', 
     'rest'=>'controller/crest.php',
     'tecnologias'=>'controller/ctecnologias.php'
     ]; 

@@ -8,6 +8,9 @@ require_once ('model/Producto.php'); //incluimos el Modelo
 session_start();
 # Contenido HTML del documento que queremos generar en PDF.
 $nombre=$_SESSION['usuario']->getCodUsuario();
+$apellidos=$_SESSION['usuario']->getApellidos();
+$direccion=$_SESSION['usuario']->getDireccion();
+$email=$_SESSION['usuario']->getEmail();
 for ($i=0;$i<count($_SESSION['carrito']->getProductos());$i++){
             $productos=Producto::obtenerProductoCod($_SESSION['carrito']->getProductos()[$i]['codProducto']);
             $Marca[$i]=$productos->getMarca();
@@ -34,6 +37,9 @@ $html='
 
 <h2>Datos Personales:</h2>
 <p>Nombre: '.$nombre.'</p>
+<p>Apellidos: '.$apellidos.'</p>
+<p>Direccion: '.$direccion.'</p>
+<p>Correo Electronico: '.$email.'
 <h2>Productos:</h2>    
 '.$output.'    
 </body>

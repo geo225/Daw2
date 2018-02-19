@@ -8,7 +8,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
  */
     class ProductoPDO{
         public static function listarProductos(){
-            $sql= "Select * from Productos";
+            $sql= "Select * from productos";
             $Producto=[];
             $arrayProducto=[]; 
             $contador=0;
@@ -30,7 +30,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
             return $Producto; 
         }
        public static function consultarProducto($codProducto){
-           $sql="Select * from Productos where codProducto=?";
+           $sql="Select * from productos where codProducto=?";
            $arrayProducto=[];
            $resultado=DBPDO::ejecutarConsulta($sql,[$codProducto]);
            if ($resultado->rowCount()==1){
@@ -44,7 +44,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
            return $arrayProducto;
        } 
         public static function buscarDescProducto($descProducto){
-            $sql= "Select * from Productos where familia like ?";
+            $sql= "Select * from productos where familia like ?";
             $Producto=[];
             $arrayProducto=[]; 
             $contador=0;
@@ -66,7 +66,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
             return $Producto; 
         }
         public static function consultarProductoCod($codProducto){
-           $sql="Select * from Productos where codProducto=?";
+           $sql="Select * from productos where codProducto=?";
            $arrayProducto=[];
            $resultado=DBPDO::ejecutarConsulta($sql,[$codProducto]);
            if ($resultado->rowCount()==1){

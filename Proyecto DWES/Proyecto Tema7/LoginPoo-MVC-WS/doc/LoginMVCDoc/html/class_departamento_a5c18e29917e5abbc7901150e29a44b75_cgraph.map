@@ -1,0 +1,7 @@
+<map id="editarDepartamento" name="editarDepartamento">
+<area shape="rect" id="node2" href="$class_departamento.html#a4c17dfa2be25810e84477c6ce051a127" title="getCodDepartamento" alt="" coords="240,5,384,32"/>
+<area shape="rect" id="node3" href="$class_departamento_p_d_o.html#a68848bb604b2ddb12ff4805c26f1022d" title="DepartamentoPDO\\editarDepartamento" alt="" coords="188,56,436,83"/>
+<area shape="rect" id="node5" href="$class_departamento.html#a373bd80f97d862daf06bb7df33a4e99a" title="setDescDepartamento" alt="" coords="237,107,387,133"/>
+<area shape="rect" id="node6" href="$class_departamento.html#a26278eaee323b8b0927d7c10aa7acff6" title="setCapacidad" alt="" coords="261,157,363,184"/>
+<area shape="rect" id="node4" href="$class_d_b_p_d_o.html#a480fc9a7895e32bc3ef3003d97cdcec4" title="DBPDO\\ejecutarConsulta" alt="" coords="484,56,653,83"/>
+</map>

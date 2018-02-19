@@ -1,0 +1,5 @@
+<map id="comprobarTexto" name="comprobarTexto">
+<area shape="rect" id="node2" href="$_funciones_validacion_8php.html#a7b336205ba97803043c858b2e79a3d01" title="comprobarNoVacio" alt="" coords="181,5,313,32"/>
+<area shape="rect" id="node3" href="$_funciones_validacion_8php.html#adf8812a02619b8dbdd1bd15b8d08d1a9" title="comprobarMaxTamanio" alt="" coords="168,56,325,83"/>
+<area shape="rect" id="node4" href="$_funciones_validacion_8php.html#a72368feaa4f2fc2355e529b66c263985" title="comprobarMinTamanio" alt="" coords="170,107,323,133"/>
+</map>

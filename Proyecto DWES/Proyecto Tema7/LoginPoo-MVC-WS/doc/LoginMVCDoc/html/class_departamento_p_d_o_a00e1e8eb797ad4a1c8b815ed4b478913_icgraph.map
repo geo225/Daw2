@@ -1,0 +1,6 @@
+<map id="consultarDepartamento" name="consultarDepartamento">
+<area shape="rect" id="node2" href="$class_departamento.html#a22155d653388c74d5a0ddb5abec95265" title="Departamento\\ObtenerDepartamento" alt="" coords="209,5,444,32"/>
+<area shape="rect" id="node4" href="$class_departamento_p_d_o.html#a70541a791a4413ae3238dfa452f7244b" title="borrarDepartamento" alt="" coords="259,56,395,83"/>
+<area shape="rect" id="node3" href="$class_soap.html#a91fd078a76b36c51a09f467ff6b7b52c" title="Soap\\SoapService" alt="" coords="539,5,667,32"/>
+<area shape="rect" id="node5" href="$class_departamento.html#a95ee62b939795e69923ecd14ed307dc9" title="Departamento\\borrarDepartamento" alt="" coords="492,56,713,83"/>
+</map>

@@ -19,7 +19,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
          * @return array   $arrayUsuario    Array asociativo con los datos del usuario 
          */
         public static function validarUsuario($codUsuario, $password){ 
-            $sql = "Select * from Usuarios WHERE codUsuario=? and password=?";
+            $sql = "Select * from usuarios WHERE codUsuario=? and password=?";
             $arrayUsuario=[]; 
             $resultadoConsulta=DBPDO::ejecutarConsulta($sql,[$codUsuario,$password]); 
             if ($resultadoConsulta->rowCount()==1) { 
@@ -35,7 +35,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
         }
         public static function registrarUsuario($codUsuario,$password,$Apellidos,$Direccion,$Email){
             $altaCorrecta=true;
-            $sql = "Insert into Usuarios values (?,?,'usuario',CURDATE(),0,?,?,?) ";
+            $sql = "Insert into usuarios values (?,?,'usuario',CURDATE(),0,?,?,?) ";
             $resultado= DBPDO::ejecutarConsulta($sql,[$codUsuario,$password,$Apellidos,$Direccion,$Email]);
             if ($resultado->rowCount()!=1){
                 $altaCorrecta = false;
@@ -43,16 +43,16 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
             return $altaCorrecta;
         }
         public static function UltimaConexion($codUsuario){
-            $sql="Update Usuarios set ultimaConexion='".date("y-m-d")."' where codUsuario=?";
+            $sql="Update usuarios set ultimaConexion='".date("y-m-d")."' where codUsuario=?";
             DBPDO::ejecutarConsulta($sql,[$codUsuario]);
         }
         public static function AumentarAccesos($codUsuario){
-            $sql="Update Usuarios set contadorAccesos=contadorAccesos+1 where codUsuario=?";
+            $sql="Update usuarios set contadorAccesos=contadorAccesos+1 where codUsuario=?";
             DBPDO::ejecutarConsulta($sql,[$codUsuario]);
         }
         public static function editarUsuario($codUsuario,$password,$Apellidos,$Direccion,$Email){
             $correcto=true;
-            $sql="Update Usuarios set password=?, Apellidos=?, Direccion=?, Email=? where codUsuario=?";
+            $sql="Update usuarios set password=?, Apellidos=?, Direccion=?, Email=? where codUsuario=?";
             $resultado= DBPDO::ejecutarConsulta($sql,[$password,$Apellidos,$Direccion,$Email,$codUsuario]);
             if($resultado->rowCount()!=1){
                 $correcto = false;
@@ -61,7 +61,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
         }
         public static function borrarUsuario($codUsuario){
             $correcto=true;
-            $sql="Delete from Usuarios where codUsuario=?";
+            $sql="Delete from usuarios where codUsuario=?";
             DBPDO::ejecutarConsulta($sql,[$codUsuario]);
             if(UsuarioPDO::consultarUsuario($codUsuario)){
                 $correcto = false;
@@ -70,7 +70,7 @@ require_once("DBPDO.php");// incluimos la clase DBPDO
         }
         public static function consultarUsuario($codUsuario){
             $correcto = true;
-            $sql="Select * from Usuarios where codUsuario=?";
+            $sql="Select * from usuarios where codUsuario=?";
             $resultado=DBPDO::ejecutarConsulta($sql,[$codUsuario]);
             if($resultado->rowCount()!=1){
                 $correcto = false;

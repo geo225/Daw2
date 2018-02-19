@@ -1,0 +1,8 @@
+<map id="editarUsuario" name="editarUsuario">
+<area shape="rect" id="node2" href="$class_usuario.html#af6744d9c5d29fc68b5e9a5fb2fab245e" title="getCodUsuario" alt="" coords="186,5,293,32"/>
+<area shape="rect" id="node3" href="$class_usuario.html#a04e0957baeb7acde9c0c86556da2d43f" title="getPassword" alt="" coords="191,56,288,83"/>
+<area shape="rect" id="node4" href="$class_usuario_p_d_o.html#a40a58f2f506f02c6aa35c385086027de" title="UsuarioPDO\\editarUsuario" alt="" coords="152,107,327,133"/>
+<area shape="rect" id="node6" href="$class_usuario.html#aea6878269f98da68495e26d45412e85e" title="setDescUsuario" alt="" coords="182,157,297,184"/>
+<area shape="rect" id="node7" href="$class_usuario.html#a3e35c8d3dbb2c513c618a664389e0926" title="setPassword" alt="" coords="191,208,288,235"/>
+<area shape="rect" id="node5" href="$class_d_b_p_d_o.html#a480fc9a7895e32bc3ef3003d97cdcec4" title="DBPDO\\ejecutarConsulta" alt="" coords="375,107,544,133"/>
+</map>
