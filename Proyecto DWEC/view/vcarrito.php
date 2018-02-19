@@ -3,11 +3,11 @@
         <div class="row" style="padding:30px;">
             <h1 class="text-center r-verde col-12"> Carrito</h1>
             <?php
-        if (count($_SESSION['carrito']->getProductos())!=0){?>
+        if (count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos())!=0){?>
 
                 <?php
-        for ($i=0;$i<count($_SESSION['carrito']->getProductos());$i++){
-            $productos=Producto::obtenerProductoCod($_SESSION['carrito']->getProductos()[$i]['codProducto']);
+        for ($i=0;$i<count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos());$i++){
+            $productos=Producto::obtenerProductoCod($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos()[$i]['codProducto']);
              $imagenes=$productos->getImagen();
             $imagenes=explode(",",$imagenes);
             ?>
@@ -40,8 +40,8 @@
 <script>
     $(document).ready(function() {
         var importe_total = 0;
-        <?php for ($i=0;$i<count($_SESSION['carrito']->getProductos());$i++){
-        $productos=Producto::obtenerProductoCod($_SESSION['carrito']->getProductos()[$i]['codProducto']);
+        <?php for ($i=0;$i<count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos());$i++){
+        $productos=Producto::obtenerProductoCod($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos()[$i]['codProducto']);
         ?>
         precio = <?php echo $productos->getPrecio(); ?>;
         cantidad = document.getElementById("cantidad<?php echo $i; ?>").value;
@@ -52,8 +52,8 @@
     });
     $('.amt').change(function() {
         var importe_total = 0;
-        <?php for ($i=0;$i<count($_SESSION['carrito']->getProductos());$i++){
-        $productos=Producto::obtenerProductoCod($_SESSION['carrito']->getProductos()[$i]['codProducto']);
+        <?php for ($i=0;$i<count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos());$i++){
+        $productos=Producto::obtenerProductoCod($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos()[$i]['codProducto']);
         ?>
         precio = <?php echo $productos->getPrecio(); ?>;
         cantidad = document.getElementById("cantidad<?php echo $i; ?>").value;

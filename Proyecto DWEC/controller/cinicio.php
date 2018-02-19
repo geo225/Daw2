@@ -9,8 +9,7 @@
  */
     $productos=Producto::listarProductos();
 if (isset($_POST['Salir'])){//Si se pulsa el boton de salir se destruye la sesion del usuario y se redirige a index.php 
-        unset($_SESSION['usuario']); 
-        session_destroy(); 
+        unset($_SESSION['usuario']);
         header("Location: index.php"); 
     } 
 if (isset($_POST['Busqueda'])){

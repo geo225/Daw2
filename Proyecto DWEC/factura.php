@@ -11,14 +11,14 @@ $nombre=$_SESSION['usuario']->getCodUsuario();
 $apellidos=$_SESSION['usuario']->getApellidos();
 $direccion=$_SESSION['usuario']->getDireccion();
 $email=$_SESSION['usuario']->getEmail();
-for ($i=0;$i<count($_SESSION['carrito']->getProductos());$i++){ 
-            $productos=Producto::obtenerProductoCod($_SESSION['carrito']->getProductos()[$i]['codProducto']);
+for ($i=0;$i<count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos());$i++){ 
+            $productos=Producto::obtenerProductoCod($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos()[$i]['codProducto']);
             $Marca[$i]=$productos->getMarca();
             $Nombre[$i]=$productos->getNombre();
             $Precio[$i]=$productos->getPrecio();
         }
 ob_start(); //Start output buffer
-for ($i=0;$i<count($_SESSION['carrito']->getProductos());$i++){
+for ($i=0;$i<count($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]->getProductos());$i++){
     echo "<tr>";
     echo "<td>$Marca[$i]</td>";
     echo "<td>$Nombre[$i]</td>";
@@ -173,6 +173,7 @@ $html='<html>
 </html>
 
 ';
+unset($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()]);
 //echo $html;
 // reference the Dompdf namespace
 use Dompdf\Dompdf;
@@ -186,6 +187,7 @@ $dompdf->setPaper('A4', 'vertical');
 
 // Render the HTML as PDF
 $dompdf->render();
-
 // Output the generated PDF to Browser
 $dompdf->stream('factura.pdf');
+
+

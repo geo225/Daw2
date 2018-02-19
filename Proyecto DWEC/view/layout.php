@@ -90,7 +90,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php" style="color:#44d62c;">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <?php if(isset($_SESSION['carrito'])){ ?>
+                <?php if(isset($_SESSION['usuario']) && isset($_SESSION['carrito'.$_SESSION['usuario']->getCodUsuario()])){ ?>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?pagina=carrito" style="color:#44d62c;">Carrito</a>
                 </li>
