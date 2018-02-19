@@ -190,4 +190,5 @@ $dompdf->render();
 // Output the generated PDF to Browser
 $dompdf->stream('factura.pdf');
 
+header("Location: index.php");       
 

@@ -78,7 +78,7 @@ class Options
      *
      * @var string
      */
-    private $defaultMediaType = "screen";
+    private $defaultMediaType = "print";
 
     /**
      * The default paper size.

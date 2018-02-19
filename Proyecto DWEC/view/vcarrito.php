@@ -1,4 +1,4 @@
-<form id="facturar" action="factura.php" method="get">
+<form id="Formfactura" action="factura.php" method="get">
     <div class="container-fluid">
         <div class="row" style="padding:30px;">
             <h1 class="text-center r-verde col-12"> Carrito</h1>
@@ -22,7 +22,7 @@
                         <div class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex align-items-center r-verde">
                             <label for="cantidad<?php echo $i; ?>" style="color:#44d62c;margin-right: 10px;">Cantidad: </label>
                             <input class="form-control amt" type="number" name="cantidad<?php echo $i; ?>" id="cantidad<?php echo $i; ?>" value="1" min="1">
-                                <a href="index.php?pagina=carrito&borrarProducto=<?php echo $i; ?>" class="btn btn-outline-success my-2 my-sm-0">Quitar</a>
+                            <a href="index.php?pagina=carrito&borrarProducto=<?php echo $i; ?>" class="btn btn-outline-success my-2 my-sm-0">Quitar</a>
                         </div>
                     </div>
                     <?php
@@ -35,7 +35,7 @@
         </div>
 
     </div>
-    <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Factura</button>
+    <button type="submit" id="botonFactura" class="btn btn-outline-success my-2 my-sm-0">Factura</button>
 </form>
 <script>
     $(document).ready(function() {
@@ -61,6 +61,12 @@
         <?php } ?>
         console.log(importe_total);
         document.getElementById("total").value = importe_total + "€";
+    });
+    $("#botonFactura").mousedown(function() {
+        setTimeout(function() {
+            window.location = 'index.php';
+        }, 400);
+
     });
 
 </script>
