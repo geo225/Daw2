@@ -40,7 +40,7 @@
 		$objUser = Usuario::validarUsuario($usuario, $password); // Comprobacion del Usuario si es correcto devuelve un objeto de Usuario si no es null 
 		if (isset($objUser)){//Comprueba si esta iniciado el objeto Usuario
 		$_SESSION['usuario']  = $objUser; //Mete el objeto a la sesion de usuario
-        Usuario::UltimaConexionyAcceso($objUser->getCodUsuario()); 
+        $_SESSION['usuario']->UltimaConexionyAcceso($objUser->getCodUsuario()); 
 		 header("Location: index.php"); //Redirige al index depues de realizar correctamente el login
 		}else {
 			$errorLogin="Usuario y contraseña incorrecto"; //Carga el error en el login

@@ -1,7 +1,7 @@
 <?php
     if(isset($_SESSION['usuario'])){
     if(!isset($_SESSION['carrito'])){
-        $_SESSION['carrito']=new Carrito(1,[]);
+        $_SESSION['carrito']=new Carrito($_SESSION['usuario']->getCodUsuario(),[]);
     }
     if(isset($_GET['codProducto'])){
         if (!$_SESSION['carrito']->comprobarProducto($_GET['codProducto'])){

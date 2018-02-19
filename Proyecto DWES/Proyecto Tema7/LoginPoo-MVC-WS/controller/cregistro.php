@@ -48,6 +48,8 @@
 		$password=hash('sha256',$_POST['password']);
         $objUser = Usuario::registrarUsuario($usuario,$password);
         if (isset($objUser)){
+            $_SESSION['usuario']=$objUser;
+            $_SESSION['usuario']->UltimaConexionyAcceso($objUser->getCodUsuario()); 
             echo "Usuario Creado con exito";
             header("Location: index.php"); //Redirige al index depues de realizar correctamente el Registro
         }else{
