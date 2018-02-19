@@ -183,9 +183,9 @@ include_once 'UsuarioPDO.php';//Incluimos la clase UsuarioPDO.php
             }
             return $usuario;
         }
-        public function UltimaConexionyAcceso($codUsuario){
-            UsuarioPDO::UltimaConexion($codUsuario);
-            UsuarioPDO::AumentarAccesos($codUsuario);
+        public function UltimaConexionyAcceso(){
+            UsuarioPDO::UltimaConexion($this->codUsuario);
+            UsuarioPDO::AumentarAccesos($this->codUsuario);
         }
         public function editarUsuario($descUsuario, $password){
             $correcto=false;
