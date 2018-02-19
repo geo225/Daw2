@@ -1,7 +1,6 @@
 <form id="facturar" action="factura.php" method="get">
     <div class="container-fluid">
         <div class="row" style="padding:30px;">
-            <p class="r-verde"><?php var_dump($_SESSION['carrito'])?></p>
             <h1 class="text-center r-verde col-12"> Carrito</h1>
             <?php
         if (count($_SESSION['carrito']->getProductos())!=0){?>
