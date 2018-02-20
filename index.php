@@ -51,6 +51,7 @@ body {font-size:16px;}
 			<a class="w3-hover-grey w3-xxlarge" href="#">Diseño de interfaces web</a><br/>
 			<a class="w3-hover-grey w3-xxlarge" href="#">Despliege de aplicaciones web</a><br/>
             <a class="w3-hover-grey w3-xxlarge" href="ExamenEvaFinal/index.php">Examen Final Baldo</a><br/>
+            <a class="w3-hover-grey w3-xxlarge" href="Angular/Angular.html">Angular</a><br/>
 		</div>
 </div>
 
