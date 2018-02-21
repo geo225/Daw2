@@ -93,7 +93,7 @@
                                             <a href="index.php?pagina=soap" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/013-Soap.png">WS SOAP</a>
                                             <a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!=" inicio " && $_GET['pagina']!="login "){ echo "index.php?pagina=rest&ant=".$_GET['pagina']; }else { echo " index.php?pagina=rest "; } ?>" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/012-apiRest.png">WS REST</a>
                                             <a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!=" inicio " && $_GET['pagina']!="login "){ echo "index.php?pagina=WIP&ant=".$_GET['pagina']; }else { echo " index.php?pagina=WIP "; } ?>" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/011-encuesta.png">Encuesta</a>
-                                            <a href="../../../Proyecto%2520DWEC/index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/016-carrito-de-la-compra-de-tienda">Tienda</a>
+                                            <a href="../../../Proyecto DWEC/index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/016-carrito-de-la-compra-de-tienda.png">Tienda</a>
                                             <?php
         }
     }
