@@ -4,7 +4,7 @@
     <h1 class="w3-xxxlarge w3-text-red"><b>Inicio</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     </div>
-    <div class="w3-section w3-quarter container-fluid w3-right w3-light-grey" >
+    <div class="w3-section w3-quarter container-fluid w3-right w3-light-grey" style="position:absolute;top:0px;right:60px;" >
         <h1 class="w3-xlarge w3-text-red"><b>Login</b></h1>
         <hr style="width:50px;border:5px solid red" class="w3-round">
         <form id="formulario" class="form-horizontal" name="FormularioLogin" action="<?PHP echo $_SERVER['PHP_SELF']; ?>" style="width:90%; margin:auto;" method="post">
@@ -55,7 +55,7 @@
           <div class="carousel-caption">
           <h3>Diagrama de Ficheros</h3>
         </div>
-        <img class="w3-text-aling-center" src="webroot/media/img/diagramaFicheros.PNG" alt="Diagrama de Ficharos" style="width:100%; height:800px;">
+        <img class="w3-text-aling-center" src="webroot/media/img/diagramaFicheros.PNG" alt="Diagrama de Ficharos" style="width:100%; height:600px;">
         
       </div>
 
@@ -63,17 +63,17 @@
           <div class="carousel-caption">
           <h3  class="w3-text-black">Diagrama de Clases</h3>
         </div>
-        <img src="webroot/media/img/diagramaMVCLogin.PNG" alt="Diagrama de Clases" style="width:100%;height:800px;">     
+        <img src="webroot/media/img/diagramaMVCLogin.PNG" alt="Diagrama de Clases" style="width:100%;height:600px;">     
       </div> 
     
       <div class="item">
           <div class="carousel-caption">
           <h3 class="w3-text-black">Arbol de Navegacion</h3>
         </div>
-        <img src="webroot/media/img/arbolnavegacionMVC.PNG" alt="Arbol de Navegacion" style="width:100%;height:800px;"> 
+        <img src="webroot/media/img/arbolnavegacionMVC.PNG" alt="Arbol de Navegacion" style="width:100%;height:600px;"> 
       </div>
       <div class="item">
-        <img src="webroot/media/img/ModeloFisicoDatosMVC.PNG" alt="Modelo fisico de Datos" style="width:100%;height:800px;">
+        <img src="webroot/media/img/ModeloFisicoDatosMVC.PNG" alt="Modelo fisico de Datos" style="width:100%;height:600px;">
         <div class="carousel-caption">
           <h3 class="w3-text-black">Modelo Fisico de Datos</h3>
         </div>

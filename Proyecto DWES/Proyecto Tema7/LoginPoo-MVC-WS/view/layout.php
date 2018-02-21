@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="/DAW204/public_html/estilos2.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
     body,
     h1,
@@ -81,19 +81,20 @@
             }
             if(isset($_GET['pagina']) && $_GET["pagina"]=="departamento"){
             ?>
-                                    
+
                                     <a href="index.php?pagina=nuevodepartamento" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/009-departamento.png">New Departamento</a>
                                     <?php
             }else{
                 ?>
-                                    <a href="index.php?pagina=departamento" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/009-departamento.png">Departamento</a>
-            <?php
+                                        <a href="index.php?pagina=departamento" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/009-departamento.png">Departamento</a>
+                                        <?php
             }
             ?>
-                                    <a href="index.php?pagina=soap"  onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/013-Soap.png">WS SOAP</a>
-                                    <a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!="inicio" && $_GET['pagina']!="login"){ echo "index.php?pagina=rest&ant=".$_GET['pagina']; }else { echo " index.php?pagina=rest "; } ?>" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/012-apiRest.png">WS REST</a>
-                                    <a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!="inicio" && $_GET['pagina']!="login"){ echo "index.php?pagina=WIP&ant=".$_GET['pagina']; }else { echo " index.php?pagina=WIP "; } ?>" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/011-encuesta.png">Encuesta</a>
-                                    <?php
+                                            <a href="index.php?pagina=soap" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/013-Soap.png">WS SOAP</a>
+                                            <a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!=" inicio " && $_GET['pagina']!="login "){ echo "index.php?pagina=rest&ant=".$_GET['pagina']; }else { echo " index.php?pagina=rest "; } ?>" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/012-apiRest.png">WS REST</a>
+                                            <a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!=" inicio " && $_GET['pagina']!="login "){ echo "index.php?pagina=WIP&ant=".$_GET['pagina']; }else { echo " index.php?pagina=WIP "; } ?>" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/011-encuesta.png">Encuesta</a>
+                                            <a href="../../../Proyecto%2520DWEC/index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><img class="w3-margin-right" src="/DAW204/public_html/Images/016-carrito-de-la-compra-de-tienda">Tienda</a>
+                                            <?php
         }
     }
     ?>
@@ -128,8 +129,8 @@
 
     <!-- W3.CSS Container -->
     <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-        <p class="w3-right">Powered by <a href="/DAW204/public_html/index.php" title="Autor" target="_blank" class="w3-hover-opacity">Rodrigo Gutierrez</a></p> 
-        <p class="w3-half w3-right"><a href="http://daw-usgit.sauces.local/rodrigo225/DWES/tree/master/Proyecto%20DWES/Proyecto%20Tema7/LoginPoo-MVC-WS" class="w3-left w3-hover-opacity w3-margin-right" target="_blank">Repositorio</a><a href="doc/LoginMVCDoc/html/index.html" class="w3-left w3-hover-opacity w3-margin-right" target="_blank">PHPDOC</a><a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!="inicio" && $_GET['pagina']!="login"){ echo "index.php?pagina=tecnologias&ant=".$_GET['pagina']; }else { echo " index.php?pagina=tecnologias"; } ?>" class="w3-left w3-hover-opacity w3-margin-right">Tecnologias</a></p>
+        <p class="w3-right">Powered by <a href="/DAW204/public_html/index.php" title="Autor" target="_blank" class="w3-hover-opacity">Rodrigo Gutierrez</a></p>
+        <p class="w3-half w3-right"><a href="http://daw-usgit.sauces.local/rodrigo225/DWES/tree/master/Proyecto%20DWES/Proyecto%20Tema7/LoginPoo-MVC-WS" class="w3-left w3-hover-opacity w3-margin-right" target="_blank">Repositorio</a><a href="doc/LoginMVCDoc/html/index.html" class="w3-left w3-hover-opacity w3-margin-right" target="_blank">PHPDOC</a><a href="<?php if (isset($_GET['pagina']) && $_GET['pagina']!=" inicio " && $_GET['pagina']!="login "){ echo "index.php?pagina=tecnologias&ant=".$_GET['pagina']; }else { echo " index.php?pagina=tecnologias "; } ?>" class="w3-left w3-hover-opacity w3-margin-right">Tecnologias</a></p>
     </div>
 
     <script>
